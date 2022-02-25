@@ -101,6 +101,9 @@ public class MainDrive {
 //		winNumbers[3] = 21;
 //		winNumbers[4] = 30;
 //		winNumbers[5] = 31;
+//		
+//		bonusNum = 45;
+		
 
 //		랜덤으로 만들어진 당첨번호들을 > 작은 수 ~ 큰 수로 정리.
 
@@ -123,42 +126,39 @@ public class MainDrive {
 		}
 
 //		정리 된 당첨번호를 확인
-		
+
 		for (int num : winNumbers) {
 			System.out.println(num);
 		}
-		
+
 //		보너스번호도 확인
-		
+
 		System.out.println("보너스번호 : " + bonusNum);
 
-		
 //		맞춘 갯수 확인
-		
+
 		int correctCount = 0;
 
 		for (int myNum : myNumbers) {
-			
+
 			for (int winNum : winNumbers) {
-				
+
 				if (myNum == winNum) {
 					correctCount++;
 				}
-				
+
 			}
-			
+
 		}
-		
-		
+
 //		등수 판정
-		
+
 		if (correctCount == 6) {
 			System.out.println("1등");
-		}
-		else if (correctCount == 5) {
+		} else if (correctCount == 5) {
 //			보너스번호 로직
-			boolean isBonusCorrect = false;	
-			
+			boolean isBonusCorrect = false;
+
 			for (int myNum : myNumbers) {
 
 				if (myNum == bonusNum) {
@@ -170,20 +170,16 @@ public class MainDrive {
 
 			if (isBonusCorrect) {
 				System.out.println("2등");
-			}
-			else {
+			} else {
 				System.out.println("3등");
 			}
-			
-		}
-		else if (correctCount == 4) {
-			
+
+		} else if (correctCount == 4) {
+
 			System.out.println("4등");
-		}
-		else if (correctCount == 3) {
+		} else if (correctCount == 3) {
 			System.out.println("5등");
-		}
-		else {
+		} else {
 			System.out.println("낙첨");
 		}
 

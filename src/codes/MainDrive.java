@@ -74,12 +74,12 @@ public class MainDrive {
 		}
 
 //		임시 당첨 번호 선정 -> 당첨 등수 로직 테스트용
-		winNumbers[0] = 10;
-		winNumbers[1] = 11;
-		winNumbers[2] = 20;
-		winNumbers[3] = 21;
-		winNumbers[4] = 30;
-		winNumbers[5] = 31;
+//		winNumbers[0] = 10;
+//		winNumbers[1] = 11;
+//		winNumbers[2] = 20;
+//		winNumbers[3] = 21;
+//		winNumbers[4] = 30;
+//		winNumbers[5] = 31;
 		
 		
 		
@@ -99,6 +99,23 @@ public class MainDrive {
 				
 			}
 			
+		}
+		if (correctCount == 6) {
+			System.out.println("1등");
+		}
+		else if (correctCount == 5) {
+//			보너스번호 로직 추가 필요
+			System.out.println("임시 - 3등");
+		}
+		else if (correctCount == 4) {
+			
+			System.out.println("4등");
+		}
+		else if (correctCount == 3) {
+			System.out.println("5등");
+		}
+		else {
+			System.out.println("낙첨");
 		}
 		
 		

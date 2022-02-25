@@ -11,9 +11,19 @@ public class MainDrive {
 		
 		for(int i = 0 ; i < 6; i++) {
 			
-			System.out.println((i+1) + "번째 숫자 : ");
+			while(true) {
+				System.out.println((i+1) + "번째 숫자 : ");
+				int inputNum = S.nextInt();
+				
+				boolean isRangeOk = (1 <= inputNum) && (inputNum <= 45);
+				
+				if(isRangeOk) {
+					break;
+				}
+				
+			}
 			
-		int inputNum = S.nextInt();
+			
 			
 		}
 		
